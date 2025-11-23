@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --animate-modal-scale-in: modal-scale-in 0.22s ease-out;
+  --animate-modal-slide-up: modal-slide-up 0.22s ease-out;
+  --animate-modal-slide-down: modal-slide-down 0.22s ease-out;
+  --animate-modal-slide-left: modal-slide-left 0.22s ease-out;
+  --animate-modal-slide-right: modal-slide-right 0.22s ease-out;
+  --animate-overlay-fade-in: overlay-fade-in 0.18s ease-out;
+
+  @keyframes modal-scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateY(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes modal-slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes modal-slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes modal-slide-left {
+    0% {
+      opacity: 0;
+      transform: translateX(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes modal-slide-right {
+    0% {
+      opacity: 0;
+      transform: translateX(-24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes overlay-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
