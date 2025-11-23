@@ -1,14 +1,12 @@
-import type { NextConfig } from "next";
-
-const repo = "react-modal-demo";
-
-const nextConfig: NextConfig = {
-  output: "export",
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}`,
+// next.config.js
+const nextConfig = {
+  output: "export", // Required for GitHub Pages
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for <Image /> to work on GitHub Pages
   },
+  basePath: process.env.NODE_ENV === "production" ? "/react-modal-demo" : "",
+  assetPrefix:
+    process.env.NODE_ENV === "production" ? "/react-modal-demo/" : "",
 };
 
-export default nextConfig;
+module.exports = nextConfig;
