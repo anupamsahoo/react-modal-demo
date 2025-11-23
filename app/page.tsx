@@ -9,6 +9,7 @@ import {
 } from "@anupamsahoo/react-modal";
 import "@anupamsahoo/react-modal/styles.css";
 import * as React from "react";
+import ThemeToggle from "./components/theme-toggle";
 
 function CodeBlock({ code }: { code: string }) {
   return (
@@ -406,6 +407,7 @@ function DeepChild() {
 export default function ReactModalDocsPage() {
   return (
     <main className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-50">
+      <ThemeToggle />
       <div className="mx-auto max-w-5xl px-4 py-10 md:py-16">
         {/* Header */}
         <header className="mb-10 md:mb-14">
