@@ -3,9 +3,10 @@
 This is a **Next.js demo project** showcasing  
 [`@anupamsahoo/react-modal`](https://www.npmjs.com/package/@anupamsahoo/react-modal) –  
 a stacked, themeable modal component built for **Tailwind CSS v4**.
-[`Demo`](https://anupamsahoo.github.io/react-modal-demo/)
 
 ---
+
+## [`Demo`](https://anupamsahoo.github.io/react-modal-demo/)
 
 ## What’s inside?
 
