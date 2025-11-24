@@ -624,6 +624,153 @@ export default function ReactModalDocsPage() {
             <CodeBlock code={hookExampleCode} />
           </div>
         </section>
+        {/* Tailwind v4 Setup */}
+        <section className="my-12 space-y-4">
+          <h2 className="text-xl md:text-2xl font-semibold">
+            Tailwind v4 Setup (Recommended)
+          </h2>
+
+          <p className="text-sm text-slate-600 dark:text-slate-400 max-w-3xl">
+            <strong>@anupamsahoo/react-modal</strong> is built for{" "}
+            <strong>Tailwind v4</strong>. Follow these steps to ensure proper
+            styling and dark mode support.
+          </p>
+
+          <div>
+            <h3 className="text-sm md:text-base font-semibold mb-2">
+              1. tailwind.css or app/globals.css
+            </h3>
+
+            <CodeBlock
+              code={`@import "tailwindcss";
+
+/* Required for theme switching */
+:root {
+  color-scheme: light dark;
+}
+
+html {
+  @apply bg-background text-foreground;
+}
+`}
+            />
+          </div>
+
+          <div>
+            <h3 className="text-sm md:text-base font-semibold mb-2">
+              2. Recommended theme variables
+            </h3>
+
+            <CodeBlock
+              code={`:root {
+  /* Base colors */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+
+  /* Modal surface + text */
+  --am-modal-bg: #ffffff;
+  --am-modal-fg: #0f172a;
+  --am-modal-border: #e2e8f0;
+
+  /* Header + footer */
+  --am-modal-header-bg: transparent;
+  --am-modal-header-border: #e2e8f0;
+  --am-modal-footer-border: #e2e8f0;
+
+  /* Overlay (40% opacity and blur from component) */
+  --am-modal-overlay-bg: rgba(0, 0, 0, 0.4);
+
+  /* Semantic variants */
+  --am-modal-danger-border: #ef4444;
+  --am-modal-success-border: #22c55e;
+  --am-modal-info-border: #0ea5e9;
+
+  /* Close button */
+  --am-modal-close-bg: #f1f5f9;
+  --am-modal-close-bg-hover: #e2e8f0;
+  --am-modal-close-fg: #0f172a;
+
+  /* Radius sync */
+  --am-modal-radius: 1rem;
+}
+
+.dark {
+  /* Base colors */
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card: #020617;
+  --card-foreground: #f8fafc;
+  --border: #334155;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+
+  /* Modal surface + text */
+  --am-modal-bg: #020617;
+  --am-modal-fg: #f8fafc;
+  --am-modal-border: #334155;
+
+  /* Header + footer */
+  --am-modal-header-bg: transparent;
+  --am-modal-header-border: #334155;
+  --am-modal-footer-border: #334155;
+
+  /* Overlay (40% opacity + dark tone) */
+  --am-modal-overlay-bg: rgba(2, 6, 23, 0.4);
+
+  /* Semantic variants */
+  --am-modal-danger-border: #f43f5e;
+  --am-modal-success-border: #4ade80;
+  --am-modal-info-border: #38bdf8;
+
+  /* Close button */
+  --am-modal-close-bg: rgba(255, 255, 255, 0.08);
+  --am-modal-close-bg-hover: rgba(255, 255, 255, 0.15);
+  --am-modal-close-fg: #f8fafc;
+
+  /* Radius sync */
+  --am-modal-radius: 1rem;
+}`}
+            />
+          </div>
+
+          <div>
+            <h3 className="text-sm md:text-base font-semibold mb-2">
+              3. Enable dark mode toggle
+            </h3>
+
+            <CodeBlock
+              code={`// ThemeToggle.tsx
+"use client";
+
+export default function ThemeToggle() {
+  const toggle = () => {
+    document.documentElement.classList.toggle("dark");
+  };
+
+  return (
+    <button
+      onClick={toggle}
+      className="fixed right-6 top-6 z-50 rounded-md 
+        bg-slate-900 text-white px-3 py-2 text-xs
+        dark:bg-slate-100 dark:text-slate-900"
+    >
+      Toggle theme
+    </button>
+  );
+}`}
+            />
+          </div>
+
+          <div className="rounded-md border border-dashed border-slate-300 dark:border-slate-700 p-4 text-sm text-slate-600 dark:text-slate-400">
+            That’s it — your modal now automatically follows Tailwind v4 +
+            dark/light theme without any extra config.
+          </div>
+        </section>
       </div>
     </main>
   );

@@ -1,5 +1,5 @@
-:HL["/react-modal-demo/_next/static/chunks/0dbb41302ee3004e.css","style"]
+:HL["/react-modal-demo/_next/static/chunks/ca4e01d75887d426.css","style"]
 :HL["/react-modal-demo/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/react-modal-demo/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/react-modal-demo/_next/static/chunks/bf1970907c992d58.css","style"]
-0:{"buildId":"6FbppnRNEwipQpPhYbo7W","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+:HL["/react-modal-demo/_next/static/chunks/4c6f6d56d5d1af88.css","style"]
+0:{"buildId":"tye0X2Y4YgtErloKbJq12","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
